@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 
 from api import models
 from api.database_connection import get_db
-from schemas.request_schema import UserSchema
-from schemas.response_schema import UserResponseSchema
-from utils.utils import hash_password
+from api.schemas.request_schema import UserSchema
+from api.schemas.response_schema import UserResponseSchema
+from api.utils import hash_password
 
 user_router = APIRouter(
     prefix="/users", tags=['Users']

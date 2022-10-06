@@ -3,10 +3,11 @@ from datetime import datetime
 from pydantic import EmailStr
 from pydantic.main import BaseModel
 
-from schemas.request_schema import PostBaseSchema
+from api.schemas.request_schema import PostBaseSchema
 
 
-class PostResponseSchema(PostBaseSchema):
+class UserResponseSchema(BaseModel):
+    email_id: EmailStr
     id: int
     created_at: datetime
 
@@ -14,10 +15,11 @@ class PostResponseSchema(PostBaseSchema):
         orm_mode = True
 
 
-class UserResponseSchema(BaseModel):
-    email_id: EmailStr
+class PostResponseSchema(PostBaseSchema):
     id: int
     created_at: datetime
+    user_id: int
+    user: UserResponseSchema
 
     class Config:
         orm_mode = True
