@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, conint
 
 
 class PostBaseSchema(BaseModel):
@@ -29,3 +29,8 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     id: str
+
+
+class VoteSchema(BaseModel):
+    post_id: str
+    vote_direction: conint(le=1)

@@ -23,3 +23,11 @@ class PostResponseSchema(PostBaseSchema):
 
     class Config:
         orm_mode = True
+
+
+class PostVoteResponseSchema(BaseModel):
+    Post: PostResponseSchema
+    votes: int
+
+    class Config:
+        orm_mode = True
