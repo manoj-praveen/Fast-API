@@ -1,6 +1,6 @@
 # Fast-API
 Fast api learning \
-Create a new virtual env 
+Create a new virtual env
 
 source venv/bin/activate \
 deactivate to exit venv \

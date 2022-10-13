@@ -1,12 +1,13 @@
 """create posts table
 
 Revision ID: 4422275122ec
-Revises: 
+Revises:
 Create Date: 2022-10-10 20:29:21.946827
 
 """
-from alembic import op
 import sqlalchemy as sa
+
+from alembic import op
 
 # revision identifiers, used by Alembic.
 revision = '4422275122ec'

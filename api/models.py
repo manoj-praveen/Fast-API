@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String, Boolean, TIMESTAMP, text, ForeignKey
+from sqlalchemy import (TIMESTAMP, Boolean, Column, ForeignKey, Integer,
+                        String, text)
 from sqlalchemy.orm import relationship
 
 from api.database_connection import Base

@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from fastapi import status, HTTPException, Depends, APIRouter
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
@@ -8,7 +8,8 @@ from api import models
 from api.database_connection import get_db
 from api.routers import oauth2
 from api.schemas.request_schema import PostSchema
-from api.schemas.response_schema import PostResponseSchema, PostVoteResponseSchema
+from api.schemas.response_schema import (PostResponseSchema,
+                                         PostVoteResponseSchema)
 
 post_router = APIRouter(
     prefix="/posts", tags=['Posts']

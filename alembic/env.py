@@ -1,11 +1,10 @@
 from logging.config import fileConfig
 
-from sqlalchemy import engine_from_config
-from sqlalchemy import pool
+from sqlalchemy import engine_from_config, pool
 
 from alembic import context
-from api.models import Base
 from api.config import settings
+from api.models import Base
 
 DB_USER = settings.DB_USER
 DB_PASSWORD = settings.DB_PASSWORD
